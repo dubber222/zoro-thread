@@ -17,7 +17,7 @@ public class InterruptedDemo {
         Thread.currentThread().interrupt();
         System.out.println("normal " + Thread.currentThread().isInterrupted());
         System.out.println("before " + Thread.interrupted());
-        System.out.println("after " + Thread.interrupted());
+        System.out.println("after " + Thread.currentThread().isInterrupted());
         System.out.println("end");
     }
 }
