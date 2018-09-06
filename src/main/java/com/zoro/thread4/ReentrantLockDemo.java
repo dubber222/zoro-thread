@@ -1,5 +1,8 @@
 package com.zoro.thread4;
 
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -26,14 +29,22 @@ public class ReentrantLockDemo {
 
     public static void main(String[] args) throws InterruptedException {
 
-        for (int i = 0; i < 1000; i++) {
-            new Thread(() -> {
-                ReentrantLockDemo.incr();
-            }).start();
-        }
+        CountDownLatch  countDownLatch = new CountDownLatch(3);
 
-        Thread.sleep(3000);
-        System.out.println("count==" + count);
+        new Thread(()->{
+            countDownLatch.countDown();
+        },"thread1").start();
+
+        new Thread(()->{
+            countDownLatch.countDown();
+        },"thread2").start();
+
+        new Thread(()->{
+            countDownLatch.countDown();
+        },"thread3").start();
+
+        countDownLatch.await();
+        System.out.println("main方法执行完毕！！");
 
     }
 
