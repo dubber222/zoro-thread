@@ -1,4 +1,4 @@
-package com.zoro.thread4;
+package com.zoro.thread.apply;
 
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;

@@ -1,4 +1,4 @@
-package com.zoro.thread4;
+package com.zoro.thread.apply;
 
 import java.util.ArrayList;
 import java.util.List;

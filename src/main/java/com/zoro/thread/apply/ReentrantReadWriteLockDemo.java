@@ -1,4 +1,4 @@
-package com.zoro.thread4;
+package com.zoro.thread.apply;
 
 import java.util.HashMap;
 import java.util.Map;

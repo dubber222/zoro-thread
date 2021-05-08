@@ -1,4 +1,4 @@
-package com.zoro.thread4;
+package com.zoro.thread.apply;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

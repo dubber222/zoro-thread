@@ -19,6 +19,7 @@ public class SaveProcessor extends Thread implements RequestProcessor {
     public SaveProcessor(RequestProcessor nextProcessor){
         this.nextProcessor = nextProcessor;
     }
+
     @Override
     public void run(){
         while(true){
